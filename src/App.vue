@@ -61,8 +61,5 @@ const toggleDoneHandler = (id) => {
 </template>
 
 <style scoped>
-button:hover{
-  opacity: 0.8;
-}
 
 </style>
