@@ -28,7 +28,7 @@ const toggleHandler = () => {
   <li class="flex items-center justify-between py-6 border-b">
     <div class="flex items-center gap-3">
       <input type="checkbox" id="todo_id_1" class="checkbox" @click="toggleHandler" />
-      <label for="todo_id_1" class="text-xl cursor-pointer"   :class="{'toggle-line':list.completed}">{{list.title}} </label>
+      <label for="todo_id_1" class="text-xl cursor-pointer"   :class="{'have_Done':list.completed}">{{list.title}} </label>
     </div>
     <div>
       <button @click.prevent="remove" class="p-2 hover:text-white hover:bg-neutral">
@@ -47,7 +47,7 @@ const toggleHandler = () => {
 
 
 <style scoped>
-.toggle-line{
+.have_Done{
   text-decoration: line-through;
   font-style: italic;
 }
