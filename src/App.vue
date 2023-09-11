@@ -1,5 +1,5 @@
 <script setup>
-import AddTodo from "./components/AddTodo.vue"
+import Todo_add from "./components/Todo_add.vue"
 import { v4 as uuidv4 } from 'uuid'
 import { ref,reactive } from 'vue'
 let NewTodoList = ref('')
@@ -18,7 +18,7 @@ function addTodoList(){
   }
 }
 
-// 收到AddTodo.vue emit廣播的id進行處理
+// 收到Todo_add.vue emit廣播的id進行處理
 function removeItem(id) {
   // 找到原本資料集id的位置
   const item = Lists.findIndex((list) => {
