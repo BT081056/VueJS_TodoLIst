@@ -18,13 +18,13 @@ function addTodoList(){
   }
 }
 
-// 收到Todo_add.vue emit廣播的id進行處理
+// get Todo_add emit
 function removeItem(id) {
-  // 找到原本資料集id的位置
+  // find id in data
   const item = Lists.findIndex((list) => {
     return list.id === id
   })
-  // 刪除idindex，splice(index,刪除幾個)
+  // del idindex，splice(index,num)
   Lists.splice(item, 1)
 }
 
