@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps } from 'vue'; //compiler macros 必須於< script setup>時使用，不然會出錯
+import { defineProps } from 'vue';
 const props = defineProps({
   list: {
     type:Object,
@@ -10,18 +10,13 @@ const props = defineProps({
   }
 })
 
-
-// 廣播事件()
-const emits = defineEmits(['remove-item','toggleDone'])
-// 點選到的id廣播給上層app.vue 進行刪除
-const remove = () => {
-  emits('remove-item', props.list.id)
-}
-
 const toggleHandler = () => {
   emits('toggleDone', props.list.id);
 };
-
+const emits = defineEmits(['remove-item','toggleDone'])
+const remove = () => {
+  emits('remove-item', props.list.id)
+}
 </script>
 
 <template>  
